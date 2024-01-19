@@ -1,0 +1,35 @@
+import BigNumber from 'bignumber.js'
+import { format } from 'currency-formatter'
+import numeral from 'numeral'
+
+export const formatAssetAmount = (_amount, _symbol, _opts = {}) => {
+  const { decimals = 3, forceDecimals = false } = _opts
+  if (BigNumber(_amount).isNaN()) {
+    return '-'
+  }
+
+  const formattedNumber = forceDecimals
+    ? BigNumber(_amount).toFixed(decimals)
+    : numeral(BigNumber(_amount).toFixed()).format(`0,0[.]${'0'.repeat(decimals)}`)
+  return `${removeUselessZeros(formattedNumber)} ${_symbol}`
+}
+
+export const removeUselessZeros = (_amount) => _amount.replace(/(\.0+|0+)$/, '')
+
+export const shouldBeApproximated = (_amount, _decimals) => {
+  const full = BigNumber(_amount).toFixed().split('.')
+  return full[1] ? full[1].length > _decimals : false
+}
+
+export const formatCurrency = (_amount, _currency) =>
+  BigNumber(_amount).isNaN()
+    ? `- ${_currency}`
+    : format(BigNumber(_amount).toFixed(), {
+        code: _currency,
+        decimal: '.',
+        thousand: ',',
+        format: _currency ? '%s %v' : '%v'
+      })
+
+export const removeUselessDecimals = (_amount, _decimals = 5) =>
+  BigNumber(BigNumber(_amount).toFixed(_decimals)).toFixed()
