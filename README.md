@@ -55,17 +55,6 @@ This will bundle and optimize the React app for best performance. The build arti
 
 &nbsp;
 
-## Contributing
-
-We welcome contributions from the community. Please refer to the `CONTRIBUTING.md` file for guidelines on how to contribute to this project.
-
-
-&nbsp;
-
-***
-
-&nbsp;
-
 ## License
 
 Gho Facilitator Crosschain UI is [MIT licensed](./LICENSE).
