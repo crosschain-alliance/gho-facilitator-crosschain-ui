@@ -222,7 +222,7 @@ const useSwap = () => {
         await publicClientTarget.waitForTransactionReceipt({ hash })
         setStep({
           percentage: 100,
-          message: 'GHO minted succesfully'
+          message: `${targetAssetAmount} GHO minted succesfully`
         })
       }
 
