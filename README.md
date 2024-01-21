@@ -1,6 +1,6 @@
-# Gho Facilitator Crosschain UI
+# FRAGOLA REFERENCE DAPP/UI
 
-Welcome to Gho Facilitator Crosschain UI, a React application built to provide a seamless interface for Gho Facilitator Crosschain. 
+Welcome to gho-fragola-ui, a React application built to provide a seamless interface for facilitators built on FRAGOLA. 
 
 
 &nbsp;
@@ -14,8 +14,8 @@ Welcome to Gho Facilitator Crosschain UI, a React application built to provide a
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/crosschain-alliance/gho-facilitator-crosschain-ui.git
-   cd gho-facilitator-crosschain-ui
+   git clone https://github.com/crosschain-alliance/gho-fragola-ui.git
+   cd gho-fragola-ui
    ```
 
 2. **Install Dependencies**
